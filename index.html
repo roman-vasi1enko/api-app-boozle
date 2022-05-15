@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Boozle - Booze Finder</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+		<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"romanvasilenko",utcoffset:"-4"}))};sessionStorage.setItem("_swa","1");</script>
+	</head>
+	<body>
+		<main>
+			
+
+			<section class="searchBox">
+				<a href="#"><h1>Boozle</h1></a>
+				<h2>Find your next favorite drink</h2>
+				<!-- SEARCH BAR -->
+				
+				<form id="searchForm">
+					<input class="query" type="text" placeholder="enter the booze you want to mix">
+					<button class="btn searchBtn" type="button" name="button">Search</button>
+					<a href="#" id="randomDrink">🌀 Surprise me</a>
+				</form>
+
+				<!-- I'M FEELING LUCKY BUTTON -->
+				
+			</section>
+
+			<!-- PAGINATION ARROWS -->
+			<nav>
+				<button class="btn" id="arrowLeft" href="#">👈</button>
+				<button class="btn" id="arrowRight" href="#">👉</button>
+			</nav>
+
+			<div class="warn">
+				<p>⚠️ Ugh! Enter the cocktail name or ingredient first.</p>
+			</div>
+			
+			<div class="info">
+				<p>🙈 Couldn't find anything. Please, try again.</p>
+			 </div>
+
+			<section class="resultBox">
+				<section class="drinkIntro">
+					
+					<section class="drinkInfo">
+						<h3></h3>
+						<!-- DINK INGREDIENTS -->
+						<ul class="drinkIngredients"></ul>
+					</section>
+					
+					<!-- IMAGE SECTION -->
+					<img src="" alt="">
+					<!-- DRINK NAME -->
+				</section>
+
+				<!-- PREP INSTRUCTIONS -->
+				<p class="prepInstructions"></p>
+				
+				
+			</section>
+			
+		</main>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

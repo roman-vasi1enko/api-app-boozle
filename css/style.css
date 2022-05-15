@@ -1,0 +1,324 @@
+/* Box Model Hack */
+* {
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+body {
+     background-color:lavender;
+}
+.searchBox, .resultBox, input {
+     background-color:rgb(249, 249, 255);
+}
+h1 {
+     margin: 0;
+     font-family: 'Rubik Moonrocks', sans-serif;
+     font-size: 60px;
+     background: -webkit-linear-gradient(#5adaff 0, #5468ff 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+h1, h2 {
+     text-align: center;  
+}
+h2 {
+     margin: 0 0 25px 0;
+     font-size: 15px;
+}
+h2, h3, p, a, form, ul {
+     font-family: 'Rubik', cursive;
+     text-decoration: none;   
+     
+}
+
+
+ul {
+     list-style-type: none;
+     padding-left: 20px;
+     text-indent: -20px;
+     
+}
+li::before {
+     content: "🔹 ";
+}
+.query:focus {
+     outline: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.searchBox, .resultBox {
+     width: 50%;
+     height: 50%;
+     margin: 0 auto;
+     box-shadow: 0 0 100px rgb(186, 189, 206);
+     border-radius: 15px;
+     
+     padding-bottom: 50px;
+     
+}
+
+
+.searchBox {
+     padding: 40px;
+     margin-top: 50px;
+     margin-bottom: 30px;
+}
+.resultBox {
+     padding: 0 50px;
+     padding-top: 5px;
+     padding-bottom: 40px;
+     margin-top: 10px;
+     margin-bottom: 50px;
+}
+form {
+     text-align: center;
+}
+.drinkIntro {
+     margin: 30px 0;
+     display: flex;
+     align-items: center;
+}
+.resultBox {
+     display: none;
+}
+.prepInstructions {
+     display: none;
+}
+
+.drinkIntro h3 {
+     padding-top: 10px;
+
+}
+.drinkInfo {
+     flex-basis: 50%;
+     align-self: flex-start;
+}
+
+img {
+     max-width: 40%;
+     border-radius: 10px;
+     margin: 0 auto;
+     display: block;
+     box-shadow: 0px 0px 20px rgba(186, 189, 206, 0.767);
+
+}
+#searchForm {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     row-gap: 20px;
+     column-gap: 20px;
+
+}
+.query {
+     flex-basis: 80%;
+     width: 60%;
+}
+#randomDrink {
+     margin: auto 0;
+}
+
+nav {
+     display: flex;
+     justify-content: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.query {
+     border: none;
+     border-bottom: 1px solid rgb(175, 175, 175);
+     text-align: center;
+
+}
+.btn {
+
+     align-items: center;
+     width: 110px;
+     border: 0;
+     border-radius: 6px;
+
+     color: #fff;
+     cursor: pointer;
+     display: block;
+     height: 35px;
+     padding-left: 16px;
+     padding-right: 16px;
+     text-align: center;
+     transition: box-shadow .15s,transform .15s;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     white-space: nowrap;
+     will-change: box-shadow,transform;
+     font-size: 14px;
+}
+
+.searchBtn {
+     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+}
+#arrowLeft, #arrowRight {
+     font-size: 50px;
+     line-height: 35px;
+     margin: 0 10px;
+     background: none;
+     display: none;
+}
+#arrowRight:hover {
+     transform: translateX(5px);
+}
+#arrowLeft:hover {
+     transform: translateX(-5px);
+}
+   
+#arrowLeft:active, #arrowRight:active {
+     transform: translateZ(-3px);
+}
+
+
+.searchBtn:hover {
+  transform: translateY(-1px);
+}
+
+.searchBtn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(1px);
+}
+
+#randomDrink {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  height: 35px;
+  line-height: 1;
+  list-style: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 14px;
+}
+
+
+
+#randomDrink:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-1px);
+}
+
+#randomDrink:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+
+.warn {
+     color: #ffffff;
+     background-color: #FF8080;
+     font-family: 'Source Sans Pro', sans-serif;
+     border-radius:.5em;
+     margin: 10px auto;
+     padding: 1px 12px;
+     width: 400px;
+     display: none;
+ }
+ .info {
+     color: #ffffff;
+     background-color: #49adf0;
+     font-family: 'Source Sans Pro', sans-serif;
+     border-radius:.5em;
+     margin: 10px auto;
+     padding: 1px 12px;
+     width: 400px;
+     display: none;
+     text-align: center;
+ }
+
+ @media screen and (min-width: 1075px) {
+     .searchBox, .resultBox {
+          width: 530px;
+     }
+}
+@media screen and (max-width: 915px) {
+     .searchBox, .resultBox {
+          width: 60%;
+     }
+}
+@media screen and (max-width: 700px) {
+     .searchBox, .resultBox {
+          width: 70%;
+     }
+}
+@media screen and (max-width: 600px) {
+     .searchBox, .resultBox {
+          width: 80%;
+     }
+}
+@media screen and (max-width: 500px) {
+     .searchBox, .resultBox {
+          width: 90%;
+     }
+     .drinkIntro {
+          flex-direction: column-reverse;
+     }
+     .prepInstructions, .drinkIntro {
+          margin: 10px;
+     }
+     .resultBox {
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-top: 40px; 
+     }
+     .resultBox img {
+          max-width: 90%;
+     }
+     .query {
+          font-size: 75%;
+     }
+     .warn, .info {
+          width: 90%;
+          line-height: 1.5em;
+          text-align: center;
+     }
+}
